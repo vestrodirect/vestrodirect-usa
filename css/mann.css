@@ -1,0 +1,2567 @@
+/* ==================================================
+   01 RESET
+================================================== */
+
+*{
+   margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+
+/* ==================================================
+   02 VARIABLES
+================================================== */
+
+:root{
+    --navy-dark:#071b3d;
+    --navy-medium:#12315a;
+    --navy-text:#142842;
+
+    --gold:#F3D67A;
+    --gold-dark:#a9812f;
+    --gold-light:#e6cb83;
+
+    --cream:#f4eee3;
+    --cream-light:#fbf8f2;
+    --pearl:#fffdf9;
+    --sand:#e8dece;
+
+    --medical-blue:#e8f1f4;
+    --medical-blue-strong:#d6e7eb;
+
+    --text:#26394e;
+    --text-soft:#5b6875;
+
+    --white:#ffffff;
+
+    --light-border:rgba(179,142,63,.28);
+    --light-shadow:0 18px 45px rgba(31,47,65,.11);
+}
+
+
+
+/* ==================================================
+   03 BASE
+================================================== */
+
+html{
+    width:100%;
+    min-height:100%;
+    scroll-behavior:smooth;
+}
+
+body{
+    width:100%;
+    min-height:100%;
+    overflow-x:hidden;
+    color:#ffffff;
+    font-family:Arial, Helvetica, sans-serif;
+    background:var(--navy-dark);
+}
+
+button,
+a{
+    -webkit-tap-highlight-color:transparent;
+}
+
+.lang-control:focus-visible,
+.boost-button:focus-visible,
+.contact-email:focus-visible,
+.footer-link:focus-visible{
+    outline:2px solid var(--gold-light);
+    outline-offset:5px;
+}
+
+
+
+/* ==================================================
+   04 HERO / HEADER
+================================================== */
+
+.hero{
+    position:relative;
+    min-height:auto;
+    overflow:hidden;
+
+    color:var(--navy-text);
+
+    background:#f5eee2;
+}
+.hero::before{
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    top:0;
+
+    width:100%;
+    height:165px;
+
+    background:#051734;
+
+    z-index:0;
+}
+
+.hero > *{
+    position:relative;
+    z-index:2;
+}
+
+.topbar{
+    width:100%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+
+    gap:32px;
+
+    padding:10px 42px 0 92px;
+}
+
+.logo-link{
+    display:block;
+    line-height:0;
+    text-decoration:none;
+}
+
+.logo{
+    width:440px;
+    height:auto;
+
+    display:block;
+
+    margin-top:4px;
+    margin-left:0;
+}
+
+.header-actions{
+    display:contents;
+}
+
+
+/* ==================================================
+   05 MAIN NAVIGATION
+================================================== */
+
+.main-navigation{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:52px;
+
+    margin-top:42px;
+}
+
+.main-navigation a{
+    position:relative;
+
+    display:inline-block;
+
+    padding:8px 0;
+
+    color:#F3D67A;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:27px;
+    font-weight:600;
+    line-height:1.1;
+    letter-spacing:0;
+
+    text-decoration:none;
+
+    transition:
+        color .22s ease,
+        opacity .22s ease;
+}
+
+.main-navigation a::after{
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    bottom:0;
+
+    width:100%;
+    height:2px;
+
+    border-radius:999px;
+
+    background:var(--gold);
+
+    transform:scaleX(0);
+    transform-origin:center;
+
+    transition:transform .22s ease;
+}
+
+.main-navigation a:hover{
+    color:#ffffff;
+}
+
+.main-navigation a:hover::after{
+    transform:scaleX(1);
+}
+
+.back-home{
+    margin-top:52px;
+    margin-right:20px;
+
+    color:#D4AF37;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:16px;
+    font-weight:600;
+    line-height:1.15;
+
+    text-decoration:none;
+}
+
+
+/* ==================================================
+   06 LANGUAGE SWITCH
+================================================== */
+
+.lang-buttons{
+    display:flex;
+    align-items:center;
+
+    gap:0;
+
+    margin-top:24px;
+}
+
+.lang-control{
+    display:block;
+
+    border:0;
+    padding:0;
+
+    background:transparent;
+
+    cursor:pointer;
+
+    opacity:.55;
+
+    transform:scale(.94);
+
+    transition:
+        opacity .2s ease,
+        transform .2s ease,
+        filter .2s ease;
+}
+
+.lang-control + .lang-control{
+    margin-left:-18px;
+}
+
+.lang-control:hover,
+.lang-control:focus-visible,
+.lang-control.is-active{
+    opacity:1;
+
+    transform:scale(1);
+
+    filter:
+        drop-shadow(
+            0 7px 17px rgba(212,175,55,.34)
+        );
+}
+
+.lang-btn{
+    width:128px;
+    height:auto;
+
+    display:block;
+}
+
+
+/* ==================================================
+   06 HERO CONTENT
+================================================== */
+
+.hero-main{
+    width:100%;
+    max-width:1440px;
+
+    margin:0 auto;
+
+    padding:0 60px 30px;
+
+    display:block;
+
+    position:relative;
+}
+.hero-content{
+    width:100%;
+    max-width:1380px;
+
+    margin:0 auto;
+    padding:0;
+
+    text-align:center;
+
+    transform:none;
+}
+.hero-kicker{
+    display:block;
+
+    margin-top:42px;
+    margin-bottom:14px;
+
+    color:#a87312;
+
+    font-size:18px;
+    font-weight:600;
+    line-height:1.35;
+    letter-spacing:.28em;
+
+    text-align:center;
+    text-transform:uppercase;
+}
+
+.hero-content h1{
+    max-width:1380px;
+
+    margin:0 auto 20px;
+
+    color:var(--navy-text);
+
+    font-size:clamp(48px,4.2vw,72px);
+    line-height:1.04;
+    font-weight:700;
+    letter-spacing:-.035em;
+
+    text-align:center;
+
+    text-shadow:none;
+}
+
+.hero-content p{
+    max-width:1240px;
+
+    margin:0 auto 14px;
+
+    color:#344154;
+
+    font-size:20px;
+    line-height:1.48;
+    font-weight:500;
+
+    text-align:center;
+}
+.symptoms-intro{
+    margin:18px auto 10px !important;
+
+    color:#a87312 !important;
+
+    font-size:23px !important;
+    font-weight:500 !important;
+    font-style:normal !important;
+    line-height:1.35 !important;
+
+    text-align:center;
+}
+.hero-topics{
+    margin:8px auto 0;
+
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+
+    gap:12px 34px;
+}
+
+.topic-item{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:8px;
+
+    color:#344154;
+
+    font-size:17px;
+    font-weight:600;
+    letter-spacing:.02em;
+}
+.topic-item img{
+    width:24px;
+    height:24px;
+
+    display:block;
+}
+
+.hero-message{
+    margin-top:20px;
+
+    max-width:900px;
+}
+
+.message-title{
+    display:block;
+
+    margin:-10px 0 0;
+
+    color:#c28a18 !important;
+
+    font-size:19px;
+    font-weight:300;
+    font-style:italic;
+    line-height:1.5;
+}
+
+.hero-message p{
+    margin:0;
+    padding-top:12px;
+
+    color:#344154;
+
+    font-size:18px;
+    font-weight:400;
+    line-height:1.7;
+}
+
+
+/* ==================================================
+   06 HERO IMAGE
+================================================== */
+/* ==================================================
+   07 HERO CTA
+================================================== */
+
+.boost-button{
+    width:clamp(235px,18vw,290px);
+    max-width:100%;
+
+    display:inline-block;
+
+    line-height:0;
+
+    border-radius:999px;
+
+    transition:
+        transform .2s ease,
+        filter .2s ease;
+}
+
+.boost-button img{
+    width:100%;
+    height:auto;
+
+    display:block;
+
+    object-fit:contain;
+}
+
+.boost-button:hover{
+    transform:
+        translateY(-4px)
+        scale(1.01);
+
+    filter:
+        drop-shadow(
+            0 14px 28px rgba(212,175,55,.28)
+        );
+}
+/* ==================================================
+   08 MAIN CONTENT
+================================================== */
+
+.main-content{
+    position:relative;
+    z-index:2;
+
+    color:var(--text);
+
+    background:#f5eee2;
+
+    box-shadow:none;
+}
+
+.light-section{
+
+    width:100%;
+
+    padding:64px 24px 70px;
+
+}
+
+.content-container{
+
+    width:min(1180px,100%);
+
+    margin:0 auto;
+
+}
+
+
+
+/* ==================================================
+   09 COMMON HEADINGS
+================================================== */
+
+.section-kicker{
+
+    display:block;
+
+    margin:0 auto 24px;
+
+    color:#b88928;
+
+    font-size:14px;
+    font-weight:700;
+
+    line-height:1.35;
+
+    letter-spacing:.32em;
+
+    text-transform:uppercase;
+
+    text-align:center;
+
+}
+.partner-offers-section .section-badge{
+    display:block;
+
+    margin:0 auto 12px;
+
+    color:#a87312;
+
+    font-size:17px;
+    font-weight:700;
+    line-height:1.35;
+    letter-spacing:.32em;
+
+    text-align:center;
+    text-transform:uppercase;
+}
+.section-heading,
+.center-heading{
+
+    max-width:980px;
+
+    margin:0 auto 22px;
+
+    text-align:center;
+
+}
+
+.section-heading h2,
+.center-heading h2{
+
+    max-width:980px;
+
+    margin:0 auto;
+
+    color:var(--navy-text);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+   font-size:clamp(38px,3.8vw,58px);
+
+    font-weight:600;
+
+    line-height:1.10;
+
+}
+
+.heading-description{
+
+    max-width:860px;
+
+    margin:20px auto 0;
+
+    color:var(--text);
+
+    font-size:18px;
+
+    line-height:1.55;
+
+}
+
+
+
+/* ==================================================
+   10 MEDICAL INFORMATION
+================================================== */
+
+.medical-about-section{
+
+    padding-top:46px;
+    padding-bottom:52px;
+    background:
+        linear-gradient(
+            180deg,
+            #efe6d8 0%,
+            #faf7f1 100%
+        );
+}
+
+.medical-about-grid{
+
+    max-width:1180px;
+
+    margin:0 auto;
+
+}
+
+.medical-about-text{
+
+    max-width:860px;
+
+    margin:0 auto;
+
+}
+
+.medical-about-text p{
+
+    margin:0;
+
+    color:var(--text);
+
+    font-size:18px;
+
+    line-height:1.58;
+
+}
+
+.medical-about-text p + p{
+
+    margin-top:16px;
+
+}
+
+/* ==================================================
+   11 HOW VESTRODIRECT HELPS
+================================================== */
+
+.vestro-help-section{
+
+    padding-top:52px;
+    padding-bottom:58px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #efe6d8 0%,
+            #faf7f1 100%
+        );
+
+}
+
+.vestro-help-text{
+
+    max-width:860px;
+
+    margin:0 auto;
+
+}
+
+.vestro-help-text p{
+
+    margin:0;
+
+    color:var(--text);
+
+    font-size:18px;
+
+    line-height:1.58;
+
+}
+
+.vestro-help-text p + p{
+
+    margin-top:16px;
+}
+ .services-section{
+
+    padding-top:52px;
+    padding-bottom:64px;
+   background:
+        linear-gradient(
+            180deg,
+            #efe6d8 0%,
+            #faf7f1 100%
+        );
+   }
+/* ==================================================
+   12 TRUST CARDS
+================================================== */
+
+.medical-card-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,minmax(0,1fr));
+
+    gap:16px;
+
+    margin-top:24px;
+
+}
+
+.medical-card{
+
+    min-height:190px;
+
+    padding:20px 18px 18px;
+
+    border:1px solid rgba(199,161,75,.30);
+
+    border-radius:22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff 0%,
+            #fbf6e9 100%
+        );
+
+    box-shadow:
+        0 12px 26px rgba(36,54,73,.07);
+
+    text-align:center;
+
+    transition:
+        transform .22s ease,
+        border-color .22s ease,
+        box-shadow .22s ease;
+
+}
+
+.medical-card:nth-child(2),
+.medical-card:nth-child(3){
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff 0%,
+            var(--medical-blue) 100%
+        );
+
+}
+
+.medical-card:hover{
+
+    transform:translateY(-4px);
+
+    border-color:rgba(169,129,47,.58);
+
+    box-shadow:
+        0 17px 34px rgba(36,54,73,.12);
+
+}
+
+.medical-icon-box{
+
+    width:82px;
+    height:82px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    margin:0 auto 12px;
+
+    border:1px solid rgba(199,161,75,.30);
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.62);
+
+}
+
+.medical-icon{
+
+    width:64px;
+    height:64px;
+
+    display:block;
+
+    object-fit:contain;
+
+}
+
+.medical-card h3{
+
+    color:var(--navy-text);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:20px;
+
+    font-weight:600;
+
+    line-height:1.18;
+
+}
+
+.medical-card p{
+
+    margin-top:6px;
+
+    color:var(--text);
+
+    font-size:15px;
+
+    line-height:1.48;
+
+}
+
+/* ==============================
+   PARTNER OFFERS
+============================== */
+
+.partner-offers-section{
+    padding-top:0;
+    padding-bottom:64px;
+    background:#f5eee2;
+}
+
+.partner-offers-section .section-heading{
+    max-width:860px;
+    margin:0 auto 22px;
+    text-align:center;
+}
+
+.partner-offers-section .section-badge{
+
+    display:block;
+
+    margin:0 auto 8px;
+
+    color:#a87312;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    line-height:1.2;
+
+    letter-spacing:.30em;
+
+    text-align:center;
+
+    text-transform:uppercase;
+
+}
+
+.partner-offers-section .section-heading h2{
+    margin:0;
+    color:#071a33;
+    font-family:"Times New Roman",serif;
+    font-size:52px;
+    font-weight:700;
+    line-height:1.05;
+}
+
+.partner-offers-section .section-heading p{
+    max-width:760px;
+    margin:22px auto 0;
+    color:#111827;
+    font-size:18px;
+    line-height:1.55;
+}
+
+.partner-offers-grid{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:28px;
+    margin-top:36px;
+}
+
+/* ==============================
+   COMMON CARD
+============================== */
+
+.partner-offer-card{
+    min-height:560px;
+    padding:0;
+    overflow:hidden;
+
+    display:flex;
+    flex-direction:column;
+
+    border:1px solid rgba(196,161,75,.56);
+    border-radius:24px;
+
+    background:
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(196,161,75,.10),
+            rgba(196,161,75,0) 38%
+        ),
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #fffdf8 100%
+        );
+
+    box-shadow:
+        0 22px 48px rgba(36,54,73,.14),
+        inset 0 1px 0 rgba(255,255,255,.95);
+
+    transition:.25s ease;
+}
+
+.partner-offer-card:hover{
+    transform:translateY(-4px);
+    border-color:#c49f37;
+
+    box-shadow:
+        0 28px 58px rgba(36,54,73,.18),
+        0 4px 14px rgba(184,138,24,.12);
+}
+
+/* ==============================
+   COMMON HEADER
+============================== */
+
+.partner-logo-wrap{
+    margin:0;
+}
+
+.partner-logo-header{
+    height:96px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:24px 24px 0 0;
+    border-bottom:3px solid rgba(196,161,75,.72);
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(255,255,255,.18),
+            transparent 44%
+        ),
+        linear-gradient(
+            180deg,
+            #0d376f 0%,
+            #17457f 55%,
+            #244f8f 100%
+        );
+}
+
+.partner-logo{
+    width:auto;
+    height:auto;
+    max-width:235px;
+    max-height:56px;
+
+    display:block;
+    object-fit:contain;
+}
+
+/* ==============================
+   COMMON BODY
+============================== */
+
+.partner-card-body{
+    padding:22px 24px 18px;
+    text-align:center;
+}
+
+.partner-card-text{
+    max-width:460px;
+    margin:0 auto 14px;
+
+    color:#16233b;
+
+    font-size:16px;
+    font-weight:700;
+    line-height:1.55;
+}
+
+/* ==============================
+   COMMON DIVIDER
+============================== */
+
+.partner-divider{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    margin:4px 0 14px;
+}
+
+.partner-divider::before,
+.partner-divider::after{
+    content:"";
+
+    flex:1;
+    height:1px;
+
+    background:rgba(196,161,75,.42);
+}
+
+.partner-divider span{
+    width:26px;
+    height:26px;
+    margin:0 10px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border:1px solid rgba(196,161,75,.65);
+    border-radius:50%;
+
+    background:#ffffff;
+    color:#c49a2c;
+
+    font-size:15px;
+    font-weight:700;
+}
+
+/* ==============================
+   COMMON BENEFITS
+============================== */
+
+.partner-benefits{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:0;
+
+    margin:0 0 22px;
+    padding:0;
+
+    list-style:none;
+}
+
+.partner-benefits li{
+    position:relative;
+
+    margin:0;
+    padding:42px 8px 0;
+
+    list-style:none;
+
+    color:#050505;
+
+    font-family:"Times New Roman",serif;
+    font-size:13px;
+    font-weight:700;
+    line-height:1.12;
+    text-align:center;
+}
+
+.partner-benefits li:not(:last-child){
+    border-right:1px dotted rgba(196,161,75,.45);
+}
+
+.partner-benefits li::before{
+    content:"✓";
+
+    position:absolute;
+    top:0;
+    left:50%;
+
+    width:32px;
+    height:32px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    transform:translateX(-50%);
+
+    border:1.5px solid #c49a2c;
+    border-radius:50%;
+
+    background:#ffffff;
+    color:#b88716;
+
+    font-family:Arial,sans-serif;
+    font-size:18px;
+    font-weight:800;
+}
+
+/* ==============================
+   COMMON TRUST LINE
+============================== */
+
+.partner-trust-line{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+
+    margin:18px 0;
+
+    color:#a87b18;
+
+    font-size:14px;
+    font-weight:600;
+}
+
+.partner-trust-line::before,
+.partner-trust-line::after{
+    content:"";
+
+    flex:1;
+
+    border-top:1px dotted rgba(196,161,75,.48);
+}
+
+.partner-trust-line span:not(:last-child)::after{
+    content:"·";
+    margin-left:8px;
+}
+
+/* ==============================
+   COMMON LINKS
+============================== */
+
+.partner-links-title{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:14px;
+
+    margin:0 0 24px;
+
+    color:#8c6a12;
+
+    font-family:"Times New Roman",serif;
+    font-size:18px;
+    font-weight:700;
+    line-height:1.2;
+    letter-spacing:0;
+    text-transform:none;
+}
+
+.partner-links-title::before,
+.partner-links-title::after{
+    content:"";
+
+    width:86px;
+
+    border-top:1px dotted rgba(196,161,75,.45);
+}
+
+.partner-links{
+    max-width:100%;
+    margin:0 auto;
+
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+}
+
+.partner-links a{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:7px 10px;
+
+    border:1px solid rgba(196,161,75,.48);
+    border-radius:999px;
+
+    background:#ffffff;
+    color:#050b14;
+
+    font-size:12.5px;
+    font-weight:700;
+    line-height:1.15;
+    text-decoration:none;
+    white-space:nowrap;
+
+    transition:.2s ease;
+}
+
+.partner-links a:hover{
+    transform:translateY(-2px);
+
+    border-color:#c49f37;
+    background:#fff6dd;
+}
+
+/* ==============================
+   COMMON BUTTON
+============================== */
+
+.partner-button{
+    display:flex;
+    justify-content:center;
+
+    margin-top:28px;
+    padding:0 0 26px;
+
+    border:none;
+    background:none;
+    box-shadow:none;
+
+    text-decoration:none;
+}
+
+.partner-button::before,
+.partner-button::after{
+    content:"";
+
+    width:92px;
+    margin:0 16px;
+
+    align-self:center;
+
+    border-top:1px dotted rgba(196,161,75,.45);
+}
+
+.partner-button img{
+    width:155px;
+    height:auto;
+
+    display:block;
+
+    border-radius:999px;
+    background:#ffffff;
+
+    transition:.25s ease;
+}
+
+.partner-button:hover{
+    border:none;
+    background:none;
+    box-shadow:none;
+}
+
+.partner-button:hover img{
+    transform:translateY(-2px) scale(1.03);
+}
+
+/* ==============================
+   EUROCLINIX CARD
+   Uses the common card design
+============================== */
+
+.partner-offer-card-euroclinix{
+
+    background:
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(185,210,240,.12),
+            rgba(185,210,240,0) 38%
+        ),
+        linear-gradient(
+            180deg,
+            #f2f8ff 0%,
+            #ffffff 100%
+        );
+
+}
+/* ==============================
+   DOKTORABC CARD
+============================== */
+
+.partner-offer-card-doktorabc{
+    background:
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(116,180,104,.08),
+            rgba(116,180,104,0) 40%
+        ),
+        linear-gradient(
+            180deg,
+            #f4fbf3 0%,
+            #fcfffc 100%
+        );
+}
+
+.partner-offer-card-doktorabc .partner-logo-header{
+    border-bottom:3px solid rgba(196,161,75,.72);
+    background:#ffffff;
+}
+
+.partner-offer-card-doktorabc .doktorabc-logo{
+    width:auto;
+    height:auto;
+    max-width:235px;
+    max-height:56px;
+
+    display:block;
+    object-fit:contain;
+}
+
+/* ==============================
+   DOKTERONLINE CARD
+============================== */
+
+.partner-offer-card-dokteronline{
+    grid-column:1 / -1;
+    width:calc((100% - 28px) / 2);
+    justify-self:center;
+
+    background:
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(184,168,230,.12),
+            rgba(184,168,230,0) 40%
+        ),
+        linear-gradient(
+            180deg,
+            #faf8ff 0%,
+            #f4f0ff 100%
+        );
+}
+
+.partner-offer-card-dokteronline .partner-logo-header{
+    border-bottom:3px solid rgba(196,161,75,.72);
+    background:#ffffff;
+}
+
+.partner-offer-card-dokteronline .dokteronline-logo{
+    width:auto;
+    height:auto;
+    max-width:235px;
+    max-height:56px;
+
+    display:block;
+    object-fit:contain;
+}
+/* ==============================
+   EMPTY CARD
+============================== */
+
+.partner-offer-card-empty{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(196,161,75,.08),
+            rgba(196,161,75,0) 42%
+        ),
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #fffdf8 100%
+        );
+}
+
+.empty-offer-inner{
+    width:86%;
+    min-height:170px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border:1px dashed rgba(190,161,75,.45);
+    border-radius:18px;
+
+    color:rgba(20,30,44,.55);
+
+    font-family:"Times New Roman",serif;
+    font-size:28px;
+    font-weight:700;
+}
+
+/* MOBILE */
+
+@media (max-width:900px){
+    .partner-offers-grid{
+        grid-template-columns:1fr;
+    }
+
+    .partner-card-body{
+        padding:24px 24px 30px;
+    }
+
+    .partner-offers-section .section-heading h2{
+        font-size:42px;
+    }
+
+    .partner-benefits{
+        grid-template-columns:repeat(2,1fr);
+        gap:16px 0;
+    }
+
+    .partner-benefits li:nth-child(2){
+        border-right:none;
+    }
+
+    .partner-links{
+        grid-template-columns:repeat(2,max-content);
+    }
+
+    .partner-links a:nth-child(5),
+    .partner-links a:nth-child(6),
+    .partner-links a:nth-child(7){
+        grid-column:auto;
+    }
+
+    .partner-button::before,
+    .partner-button::after{
+        display:none;
+    }
+}
+/* ==================================================
+   NEXT STEP / CROSS LINK
+================================================== */
+
+.next-step-section{
+
+    padding:56px 0 64px;
+
+}
+
+.next-step-content{
+
+    max-width:980px;
+
+    margin:0 auto;
+
+    text-align:left;
+
+}
+
+.next-step-label{
+
+    display:block;
+
+    margin-bottom:12px;
+
+    color:#b88928;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    line-height:1.3;
+
+    letter-spacing:.24em;
+
+    text-transform:uppercase;
+
+}
+
+.next-step-content h2{
+
+    margin:0 0 14px;
+
+    color:var(--navy-text);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:52px;
+
+    font-weight:700;
+
+    line-height:1.08;
+
+}
+
+.next-step-content p{
+
+    margin:0 0 22px;
+
+    max-width:980px;
+
+    color:var(--text);
+
+    font-size:18px;
+
+    line-height:1.68;
+
+}
+
+.next-step-content .next-step-button{
+
+    display:inline-block;
+
+    color:#b88928;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:30px;
+
+    font-weight:700;
+
+    line-height:1.2;
+
+    text-decoration:none;
+
+    border-bottom:2px solid #b88928;
+
+    padding-bottom:4px;
+
+    transition:
+        color .25s ease,
+        border-color .25s ease,
+        transform .25s ease;
+
+}
+
+.next-step-content .next-step-button:hover{
+
+    color:#9d731c;
+
+    border-bottom-color:#9d731c;
+
+    transform:translateX(4px);
+
+}
+/* ==================================================
+   13 FAQ
+================================================== */
+
+.faq-section{
+
+    padding:54px 24px 64px;
+
+    background:
+    linear-gradient(
+        180deg,
+        #efe6d8 0%,
+        #faf7f1 100%
+    );
+}
+
+.faq-section .section-heading{
+
+    text-align:center;
+
+}
+
+.faq-section .section-badge{
+
+    display:block;
+
+    width:100%;
+
+    margin:0 auto 22px;
+
+    color:#b88928;
+
+    font-size:14px;
+    font-weight:600;
+
+    line-height:1.35;
+
+    text-transform:uppercase;
+    letter-spacing:.24em;
+
+    text-align:center;
+
+}
+
+.faq-section .section-badge::before,
+.faq-section .section-badge::after{
+
+    display:none;
+
+}
+
+.faq-section h2{
+
+    margin-bottom:30px;
+
+    text-align:center;
+
+}
+.faq-list{
+
+    max-width:840px;
+
+    margin:0 auto;
+
+}
+
+.faq-item{
+
+    margin-bottom:14px;
+
+    overflow:hidden;
+
+    border:1px solid #e8ebf1;
+    border-radius:18px;
+
+    background:#ffffff;
+
+    box-shadow:0 7px 20px rgba(0,0,0,.045);
+
+    transition:box-shadow .25s ease;
+
+}
+
+.faq-item:hover{
+
+    box-shadow:0 11px 28px rgba(0,0,0,.075);
+
+}
+
+.faq-item summary{
+
+    position:relative;
+
+    padding:22px 30px;
+
+    list-style:none;
+
+    cursor:pointer;
+
+    color:#13294B;
+
+    font-size:19px;
+    font-weight:650;
+
+}
+
+.faq-item summary::-webkit-details-marker{
+
+    display:none;
+
+}
+
+.faq-item summary::after{
+
+    content:"+";
+
+    position:absolute;
+    top:50%;
+    right:30px;
+
+    transform:translateY(-50%);
+
+    color:#b88928;
+
+    font-size:32px;
+    font-weight:300;
+
+    transition:.25s ease;
+
+}
+
+.faq-item[open] summary::after{
+
+    content:"−";
+
+}
+
+.faq-item p{
+
+    margin:0;
+
+    padding:0 30px 24px;
+
+    color:#5B6574;
+
+    font-size:17px;
+    line-height:1.65;
+
+}
+
+/* ==================================================
+   14 FOOTER
+================================================== */
+
+.site-footer{
+
+    width:100%;
+
+    padding:46px 20px 24px;
+
+    background:#071D3A;
+
+}
+
+.site-footer .content-container{
+
+    max-width:1180px;
+
+    margin:0 auto;
+
+}
+
+.footer-links{
+
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    flex-wrap:wrap;
+
+    gap:110px;
+
+}
+
+.footer-link{
+
+    width:160px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    text-align:center;
+    text-decoration:none;
+
+    transition:
+        transform .25s ease,
+        opacity .25s ease;
+
+}
+
+.footer-link:hover{
+
+    transform:translateY(-4px);
+
+    opacity:.9;
+
+}
+
+.footer-link img{
+
+    width:56px;
+    height:56px;
+
+    display:block;
+
+    margin-bottom:10px;
+
+    object-fit:contain;
+
+}
+
+.footer-link span{
+
+    color:#D4AF37;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:26px;
+    font-weight:400;
+
+    line-height:1.15;
+
+}
+
+.footer-link::after{
+
+    content:"";
+
+    width:82px;
+    height:3px;
+
+    margin-top:14px;
+
+    border-radius:999px;
+
+    background:#D4AF37;
+
+}
+
+.footer-copy{
+
+    margin-top:26px;
+
+    text-align:center;
+
+    color:rgba(255,255,255,.60);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+}
+
+.footer-copy p{
+
+    margin:0;
+
+}
+
+.footer-copy p:first-child{
+
+    font-size:14px;
+    font-weight:500;
+
+}
+
+.footer-copy p:last-child{
+
+    display:none;
+
+}
+
+/* ==================================================
+   15 RESPONSIVE
+================================================== */
+
+@media (max-width:1050px){
+
+    .topbar{
+        align-items:flex-start;
+
+        padding-left:44px;
+
+        gap:24px;
+    }
+
+    .logo{
+        width:420px;
+    }
+
+    .main-navigation{
+        gap:30px;
+
+        margin-top:58px;
+    }
+
+    .main-navigation a{
+        font-size:22px;
+    }
+
+    .hero-main{
+        padding-left:70px;
+    }
+
+    .hero-content{
+        width:620px;
+        max-width:620px;
+    }
+
+    .hero-visual{
+        right:-20px;
+        top:150px;
+
+        width:560px;
+    }
+
+    .medical-about-grid{
+        grid-template-columns:1fr;
+    }
+
+    .medical-card-grid{
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+    }
+
+    .footer-links{
+        gap:55px;
+    }
+}
+
+@media (max-width:768px){
+
+    html,
+    body{
+        width:100%;
+        max-width:100%;
+
+        overflow-x:hidden;
+    }
+
+
+    /* ==============================
+       MOBILE HERO
+    ============================== */
+
+    .hero,
+    .hero *{
+        box-sizing:border-box;
+    }
+
+    .hero{
+        width:100%;
+
+        min-height:auto;
+
+        overflow:hidden;
+
+        background:
+            linear-gradient(
+                180deg,
+                #f7f2e8 0%,
+                #f2eadc 100%
+            );
+    }
+
+    .hero::before{
+        height:205px;
+    }
+
+
+    /* ==============================
+       MOBILE HEADER
+    ============================== */
+
+  .topbar{
+    width:100%;
+
+    padding:10px 16px 8px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    gap:6px;
+}
+.header-actions{
+    width:100%;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    margin:0;
+}
+
+.logo-link{
+    display:block;
+
+    line-height:0;
+
+    text-decoration:none;
+}
+
+.logo{
+    width:205px;
+    max-width:78vw;
+
+    margin:0 auto 2px;
+
+    display:block;
+}
+
+/* ==============================
+   MOBILE LANGUAGE
+============================== */
+
+.lang-buttons{
+    margin:0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    gap:8px;
+}
+
+.lang-btn{
+    width:76px;
+}
+
+.lang-control{
+    margin:0;
+}
+
+.lang-control + .lang-control{
+    margin-left:-6px;
+}
+
+
+/* ==============================
+   MOBILE NAVIGATION
+============================== */
+
+.main-navigation{
+    width:100%;
+
+    margin:4px 0 0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    gap:20px;
+
+    order:initial;
+}
+
+.main-navigation a{
+    color:#c28a18;
+
+    font-size:18px;
+    line-height:1.1;
+    letter-spacing:.02em;
+}
+
+.main-navigation a:hover{
+    color:#c28a18;
+}
+
+.back-home{
+    margin:2px 0 0;
+
+    color:#a87312;
+
+    font-size:14px;
+
+    order:3;
+}
+    /* ==============================
+       MOBILE HERO CONTENT
+    ============================== */
+
+   .hero-main{
+    width:100%;
+    max-width:100%;
+
+    padding:14px 18px 20px;
+
+    margin:0 auto;
+
+    display:block !important;
+
+    box-sizing:border-box;
+    overflow:hidden;
+}
+    .hero-content{
+        width:100% !important;
+        max-width:100% !important;
+
+        margin:0 auto;
+        padding:0;
+
+        text-align:center;
+
+        transform:none !important;
+    }
+
+  .hero-kicker{
+       margin:0 0 28px !important;
+
+    color:#a87312;
+
+    font-size:11px;
+    font-weight:700;
+    line-height:1.35;
+    letter-spacing:.14em;
+
+    text-align:center;
+}
+    .hero-content h1{
+    width:100% !important;
+    max-width:100% !important;
+
+    margin:0 auto 18px;
+
+    color:var(--navy-text);
+
+    font-size:39px;
+    line-height:1.08;
+    font-weight:700;
+    letter-spacing:-.035em;
+
+    text-align:center;
+
+    transform:none !important;
+}
+   .hero-content p{
+    width:100% !important;
+    max-width:100% !important;
+
+    margin:0 auto 14px;
+
+    color:#344154;
+
+    font-size:17px;
+    line-height:1.52;
+    font-weight:500;
+
+    text-align:center;
+
+    transform:none !important;
+}
+    .symptoms-intro{
+    margin:18px auto 10px !important;
+
+    color:#a87312 !important;
+
+    font-size:20px !important;
+    font-weight:500 !important;
+    line-height:1.3 !important;
+
+    text-align:center;
+}
+   .hero-topics{
+    width:max-content;
+    max-width:100%;
+
+    margin:0 auto;
+
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+
+    gap:5px;
+}
+
+   .topic-item{
+    width:100%;
+
+    justify-content:flex-start;
+
+    color:var(--navy-text);
+
+    font-size:16px;
+    line-height:1.3;
+
+    text-align:left;
+}
+   .topic-item img{
+    width:27px;
+    height:27px;
+
+    flex-shrink:0;
+}
+
+    .hero-message{
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .message-title{
+        color:#c28a18 !important;
+    }
+
+    .hero-message p{
+        color:#344154;
+    }
+
+
+    /* ==============================
+       MOBILE HERO IMAGE
+    ============================== */
+
+    .hero-visual{
+        position:relative;
+
+        right:auto;
+        top:auto;
+
+        width:100%;
+        max-width:320px;
+
+        margin:20px auto 35px;
+
+        display:flex;
+        justify-content:center;
+    }
+
+    .hero-visual img{
+        width:100%;
+        max-width:320px;
+        height:auto;
+
+        display:block;
+
+        transform:none;
+    }
+
+    .boost-button{
+        width:250px;
+    }
+
+
+    /* ==============================
+       MAIN CONTENT
+    ============================== */
+
+    .light-section,
+    .medical-about-section,
+    .vestro-help-section{
+        width:100%;
+
+        padding:54px 20px;
+
+        box-sizing:border-box;
+    }
+
+    .section-heading,
+    .center-heading{
+        margin-bottom:30px;
+
+        text-align:center;
+    }
+
+    .section-kicker{
+        margin-bottom:18px;
+
+        font-size:12px;
+        letter-spacing:.14em;
+    }
+
+    .section-heading h2,
+    .center-heading h2{
+        font-size:clamp(34px,9vw,44px);
+        line-height:1.08;
+    }
+
+    .heading-description,
+    .medical-about-text p,
+    .vestro-help-text p{
+        font-size:17px;
+        line-height:1.65;
+    }
+
+
+    /* ==============================
+       MEDICAL CARDS
+    ============================== */
+
+    .medical-card-grid{
+        width:100%;
+        max-width:100%;
+
+        grid-template-columns:1fr;
+
+        gap:22px;
+    }
+
+    .medical-card{
+        width:100%;
+        max-width:100%;
+
+        min-height:auto;
+
+        padding:34px 26px;
+
+        box-sizing:border-box;
+    }
+
+    .medical-icon-box{
+        width:130px;
+        height:130px;
+    }
+
+    .medical-icon{
+        width:108px;
+        height:108px;
+    }
+
+
+    /* ==============================
+       PARTNER OFFERS
+    ============================== */
+
+   .partner-offers-section{
+    padding:10px 18px 54px;
+
+    background:#f5eee2;
+}
+
+    .partner-offers-grid{
+        width:100%;
+
+        grid-template-columns:1fr;
+
+        gap:22px;
+    }
+
+    .partner-offer-card{
+        width:100%;
+        max-width:100%;
+
+        min-height:auto;
+    }
+
+    .partner-card-body{
+        padding:24px 20px 28px;
+    }
+
+   .partner-offers-section .section-heading h2{
+    margin:0 auto 14px;
+
+    font-size:38px;
+    line-height:1.04;
+}
+.partner-offers-section{
+    padding:10px 18px 54px;
+
+    background:#f5eee2;
+}
+   .partner-offers-section .section-heading{
+    max-width:100%;
+
+    margin:0 auto 20px;
+
+    text-align:center;
+}
+   .partner-offers-section .section-badge{
+    display:block;
+
+    margin:0 auto 8px;
+
+    color:#a87312;
+
+    font-size:15px;
+    font-weight:700;
+    line-height:1.3;
+    letter-spacing:.25em;
+
+    text-align:center;
+    text-transform:uppercase;
+}
+   .partner-offers-section .section-heading p{
+    margin:0 auto;
+
+    font-size:16px;
+    line-height:1.48;
+}
+    .partner-benefits{
+        grid-template-columns:
+            repeat(2,1fr);
+
+        gap:16px 0;
+    }
+
+    .partner-benefits li:nth-child(2){
+        border-right:none;
+    }
+
+    .partner-links{
+        width:100%;
+
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+
+        gap:10px;
+    }
+
+    .partner-links a{
+        white-space:normal;
+
+        text-align:center;
+    }
+
+    .partner-button::before,
+    .partner-button::after{
+        display:none;
+    }
+
+    .partner-offer-card-dokteronline{
+        grid-column:auto;
+
+        width:100%;
+
+        justify-self:stretch;
+    }
+
+    .partner-offer-card-dokteronline
+    .partner-logo-header{
+        background:#ffffff;
+
+        border-bottom:
+            3px solid rgba(196,161,75,.72);
+    }
+
+    .partner-offer-card-dokteronline
+    .dokteronline-logo{
+        width:auto;
+        height:auto;
+
+        max-width:235px;
+        max-height:56px;
+
+        display:block;
+
+        object-fit:contain;
+    }
+
+
+    /* ==============================
+       NEXT STEP
+    ============================== */
+
+    .next-step-section{
+        width:100%;
+
+        padding:44px 20px 58px;
+
+        box-sizing:border-box;
+    }
+
+    .next-step-content{
+        width:100%;
+        max-width:100%;
+
+        margin:0 auto;
+
+        text-align:left;
+    }
+
+    .next-step-label{
+        margin-bottom:14px;
+
+        font-size:12px;
+        line-height:1.3;
+        letter-spacing:.22em;
+    }
+
+    .next-step-content h2{
+        margin:0 0 18px;
+
+        font-size:38px;
+        line-height:1.08;
+    }
+
+    .next-step-content p{
+        width:100%;
+        max-width:100%;
+
+        margin:0 0 22px;
+
+        font-size:17px;
+        line-height:1.7;
+    }
+
+    .next-step-content .next-step-button{
+        max-width:100%;
+
+        padding-bottom:4px;
+
+        font-size:24px;
+        line-height:1.25;
+    }
+
+
+    /* ==============================
+       FAQ
+    ============================== */
+
+    .faq-section{
+        width:100%;
+
+        padding:54px 20px;
+
+        box-sizing:border-box;
+    }
+
+    .faq-section .section-badge{
+        gap:10px;
+
+        font-size:13px;
+    }
+
+    .faq-section .section-badge::before,
+    .faq-section .section-badge::after{
+        width:28px;
+    }
+
+    .faq-section h2{
+        margin-bottom:30px;
+    }
+
+    .faq-list{
+        max-width:100%;
+    }
+
+    .faq-item summary{
+        padding:20px;
+        padding-right:54px;
+
+        font-size:18px;
+    }
+
+    .faq-item summary::after{
+        right:20px;
+
+        font-size:30px;
+    }
+
+    .faq-item p{
+        padding:0 20px 20px;
+
+        font-size:16px;
+    }
+
+
+    /* ==============================
+       FOOTER
+    ============================== */
+
+    .site-footer{
+        width:100%;
+
+        padding:52px 20px 34px;
+
+        box-sizing:border-box;
+    }
+
+    .footer-links{
+        flex-direction:row;
+        justify-content:center;
+        align-items:flex-start;
+
+        gap:22px;
+    }
+
+    .footer-link{
+        width:92px;
+    }
+
+    .footer-link img{
+        width:38px;
+        height:38px;
+    }
+
+    .footer-link span{
+        font-size:18px;
+    }
+
+    .footer-link::after{
+        width:52px;
+        height:2px;
+
+        margin-top:10px;
+    }
+
+    .footer-copy{
+        margin-top:32px;
+    }
+
+    .footer-copy p:first-child{
+        font-size:14px;
+    }
+
+    .footer-copy p:last-child{
+        font-size:13px;
+        line-height:1.6;
+    }
+}
+
+}
