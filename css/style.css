@@ -333,7 +333,9 @@ img{
 
 .partner-offers-section{
     width:100%;
+
     padding:6px 0 62px;
+
     background:var(--cream);
 }
 
@@ -348,12 +350,16 @@ img{
 
     display:grid;
     grid-template-columns:repeat(2,minmax(0,1fr));
-    align-items:stretch;
+    align-items:start;
     gap:30px;
 }
 
+
+/* ==================================================
+   PARTNER CARDS
+================================================== */
+
 .partner-offer-card{
-    height:100%;
     overflow:hidden;
 
     display:flex;
@@ -364,6 +370,7 @@ img{
 
     box-shadow:var(--shadow);
 }
+
 
 /* ==================================================
    CARD COLOR SCHEMES
@@ -387,7 +394,8 @@ img{
 
 .partner-offer-card-tenga{
     grid-column:1 / -1;
-    width:calc(50% - 15px);
+
+    width:72%;
     justify-self:center;
 
     background:linear-gradient(
@@ -396,6 +404,7 @@ img{
         #fff5f3 100%
     );
 }
+
 
 /* ==================================================
    PARTNER LOGO HEADERS
@@ -433,6 +442,7 @@ img{
 
 .partner-logo{
     display:block;
+
     object-fit:contain;
 }
 
@@ -447,12 +457,14 @@ img{
 .orion-claim{
     width:134px;
     height:auto;
+
     display:block;
 }
 
 .tenga-logo{
     width:200px;
 }
+
 
 /* ==================================================
    PARTNER CARD BODY
@@ -464,20 +476,21 @@ img{
     display:flex;
     flex-direction:column;
 
-    padding:26px 32px 28px;
+    padding:22px 30px 24px;
 }
 
 .partner-card-text{
-    min-height:84px;
+    min-height:72px;
 
     color:var(--navy-text);
 
     font-size:17px;
     font-weight:600;
-    line-height:1.52;
+    line-height:1.45;
 
     text-align:center;
 }
+
 
 /* ==================================================
    PARTNER DIVIDER
@@ -487,13 +500,13 @@ img{
     position:relative;
 
     width:100%;
-    height:28px;
+    height:24px;
 
     display:flex;
     align-items:center;
     justify-content:center;
 
-    margin:10px 0 12px;
+    margin:6px 0 9px;
 }
 
 .partner-divider::before,
@@ -529,6 +542,7 @@ img{
     object-fit:contain;
 }
 
+
 /* ==================================================
    PARTNER BENEFITS
 ================================================== */
@@ -536,7 +550,7 @@ img{
 .partner-benefits{
     display:grid;
     grid-template-columns:repeat(4,minmax(0,1fr));
-    gap:12px;
+    gap:10px;
 
     margin:0;
     padding:0;
@@ -547,13 +561,13 @@ img{
 .partner-benefits li{
     position:relative;
 
-    padding-top:41px;
+    padding-top:37px;
 
     color:var(--navy-text);
 
     font-size:12px;
     font-weight:700;
-    line-height:1.38;
+    line-height:1.32;
 
     text-align:center;
 }
@@ -584,6 +598,7 @@ img{
     transform:translateX(-50%);
 }
 
+
 /* ==================================================
    PARTNER TRUST LINE
 ================================================== */
@@ -595,7 +610,7 @@ img{
     flex-wrap:wrap;
     gap:8px 18px;
 
-    margin:22px 0 18px;
+    margin:15px 0 12px;
 }
 
 .partner-trust-line span{
@@ -622,12 +637,13 @@ img{
     color:var(--gold);
 }
 
+
 /* ==================================================
    PARTNER CATEGORY TITLE
 ================================================== */
 
 .partner-links-title{
-    margin-bottom:13px;
+    margin-bottom:10px;
 
     color:#ad770f;
 
@@ -643,19 +659,17 @@ img{
     text-align:center;
 }
 
+
 /* ==================================================
    PARTNER CATEGORY LINKS
 ================================================== */
 
 .partner-category-links{
-    min-height:68px;
-
     display:flex;
     justify-content:center;
     align-items:center;
-    align-content:flex-start;
     flex-wrap:wrap;
-    gap:9px;
+    gap:8px;
 }
 
 .partner-category-links a{
@@ -690,6 +704,7 @@ img{
     border-color:var(--navy-text);
 }
 
+
 /* ==================================================
    PARTNER MAIN BUTTON
 ================================================== */
@@ -699,8 +714,7 @@ img{
 
     display:block;
 
-    margin:auto auto 0;
-    padding-top:20px;
+    margin:16px auto 0;
 
     line-height:0;
     text-decoration:none;
@@ -712,6 +726,7 @@ img{
 
 .partner-main-button:hover{
     transform:translateY(-2px);
+
     filter:drop-shadow(
         0 6px 9px rgba(183,125,18,.25)
     );
@@ -720,9 +735,9 @@ img{
 .partner-main-button img{
     width:100%;
     height:auto;
+
     display:block;
 }
-
 /* ==================================================
    10 WHY VESTRODIRECT
 ================================================== */
