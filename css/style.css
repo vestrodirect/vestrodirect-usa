@@ -594,24 +594,25 @@ img{
 .why-section{
     width:100%;
 
-    padding:58px 0;
+    padding:52px 0 58px;
 
     background:var(--cream-light);
 }
 
 .why-grid{
+    width:100%;
+    max-width:1040px;
+    margin:0 auto;
+
     display:grid;
     grid-template-columns:repeat(4, minmax(0, 1fr));
-    gap:16px;
-
-    max-width:920px;
-    margin:0 auto;
+    gap:18px;
 }
 
 .why-card{
-    min-height:192px;
+    min-height:200px;
 
-    padding:18px 16px;
+    padding:20px 18px;
 
     border:1px solid var(--border);
     border-radius:16px;
@@ -628,19 +629,19 @@ img{
 }
 
 .why-icon-box{
-    width:54px;
-    height:54px;
+    width:62px;
+    height:62px;
 
     display:flex;
     align-items:center;
     justify-content:center;
 
-    margin:0 auto 10px;
+    margin:0 auto 12px;
 }
 
 .why-icon{
-    width:50px;
-    height:50px;
+    width:58px;
+    height:58px;
 
     display:block;
 
@@ -678,38 +679,39 @@ img{
 .faq-section{
     width:100%;
 
-    padding:58px 0 70px;
+    padding:52px 0 52px;
 
     background:var(--cream);
 }
 
 .faq-list{
-    max-width:680px;
+    width:100%;
+    max-width:760px;
     margin:0 auto;
 }
 
 .faq-item{
     overflow:hidden;
 
-    margin-bottom:10px;
+    margin-bottom:12px;
 
     border:1px solid rgba(31,47,65,.12);
-    border-radius:11px;
+    border-radius:12px;
 
     background:#ffffff;
-    box-shadow:0 7px 18px rgba(31,47,65,.06);
+    box-shadow:0 8px 20px rgba(31,47,65,.06);
 }
 
 .faq-item summary{
     position:relative;
 
-    padding:15px 48px 15px 18px;
+    padding:17px 58px 17px 22px;
 
     color:var(--navy-text);
 
-    font-size:14px;
+    font-size:15px;
     font-weight:700;
-    line-height:1.35;
+    line-height:1.4;
 
     cursor:pointer;
     list-style:none;
@@ -723,7 +725,7 @@ img{
     content:"+";
 
     position:absolute;
-    right:18px;
+    right:22px;
     top:50%;
 
     color:#b47b10;
@@ -733,7 +735,7 @@ img{
         "Times New Roman",
         serif;
 
-    font-size:22px;
+    font-size:30px;
     font-weight:400;
     line-height:1;
 
@@ -745,12 +747,12 @@ img{
 }
 
 .faq-item p{
-    padding:0 18px 16px;
+    padding:0 22px 18px;
 
     color:var(--text);
 
-    font-size:13px;
-    line-height:1.55;
+    font-size:14px;
+    line-height:1.6;
 }
 
 
@@ -761,7 +763,7 @@ img{
 .site-footer{
     width:100%;
 
-    padding:46px 20px 24px;
+    padding:38px 20px 22px;
 
     background:var(--navy);
 }
@@ -776,7 +778,8 @@ img{
     justify-content:center;
     align-items:flex-start;
     flex-wrap:wrap;
-    gap:110px;
+
+    gap:96px;
 }
 
 .footer-link{
@@ -836,7 +839,7 @@ img{
 }
 
 .footer-copy{
-    margin-top:26px;
+    margin-top:22px;
 
     color:rgba(255,255,255,.60);
 
