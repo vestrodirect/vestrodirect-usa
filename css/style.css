@@ -941,7 +941,7 @@ img{
 .site-footer{
     width:100%;
 
-    padding:38px 20px 22px;
+   padding:34px 20px 18px;
 
     background:var(--navy);
 }
@@ -985,7 +985,7 @@ img{
 
     display:block;
 
-    margin-bottom:10px;
+    margin-bottom:8px;
 
     object-fit:contain;
 }
@@ -1016,7 +1016,7 @@ img{
 }
 
 .footer-copy{
-    margin-top:22px;
+    margin-top:18px;
 
     color:rgba(255,255,255,.60);
 
