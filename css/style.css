@@ -957,11 +957,11 @@ img{
     align-items:flex-start;
     flex-wrap:wrap;
 
-    gap:96px;
+    gap:70px;
 }
 
 .footer-link{
-    width:160px;
+    width:240px;
 
     display:flex;
     flex-direction:column;
@@ -974,7 +974,6 @@ img{
         transform .25s ease,
         opacity .25s ease;
 }
-
 .footer-link:hover{
     transform:translateY(-4px);
     opacity:.9;
@@ -990,7 +989,6 @@ img{
 
     object-fit:contain;
 }
-
 .footer-link span{
     color:var(--gold);
 
@@ -999,11 +997,12 @@ img{
         "Times New Roman",
         serif;
 
-    font-size:26px;
+    font-size:24px;
     font-weight:400;
     line-height:1.15;
-}
 
+    white-space:nowrap;
+}
 .footer-link::after{
     content:"";
 
