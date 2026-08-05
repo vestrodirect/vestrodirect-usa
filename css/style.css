@@ -353,7 +353,6 @@ img{
     font-weight:500;
     line-height:1.55;
 }
-
 /* ==================================================
    09 PARTNER OFFERS SECTION
 ================================================== */
@@ -377,7 +376,7 @@ img{
 
     display:grid;
     grid-template-columns:repeat(2,minmax(0,1fr));
-    align-items:start;
+    align-items:stretch;
     gap:30px;
 }
 
@@ -389,29 +388,24 @@ img{
 .partner-offer-card{
     overflow:hidden;
 
+    height:100%;
+
     display:flex;
     flex-direction:column;
 
     border:1px solid var(--border);
     border-radius:22px;
 
-    box-shadow:var(--shadow);
-}
-
-
-/* ==================================================
-   CARD COLOR SCHEMES
-================================================== */
-
-.partner-offer-card-mystim{
     background:linear-gradient(
         180deg,
         #fffaf4 0%,
         #fff5e9 100%
     );
+
+    box-shadow:var(--shadow);
 }
 
-.partner-offer-card-orion{
+.partner-offer-card:nth-child(even){
     background:linear-gradient(
         180deg,
         #f5fbfe 0%,
@@ -424,12 +418,6 @@ img{
 
     width:calc(50% - 15px);
     justify-self:center;
-
-    background:linear-gradient(
-        180deg,
-        #fffdfb 0%,
-        #fff5f3 100%
-    );
 }
 
 
@@ -722,13 +710,16 @@ img{
     transition:
         color .2s ease,
         background .2s ease,
-        border-color .2s ease;
+        border-color .2s ease,
+        transform .2s ease;
 }
 
 .partner-category-links a:hover{
     color:#ffffff;
     background:var(--navy-text);
     border-color:var(--navy-text);
+
+    transform:translateY(-1px);
 }
 
 
@@ -737,22 +728,106 @@ img{
 ================================================== */
 
 .partner-main-button{
-    width:142px;
+    min-width:176px;
+    min-height:42px;
 
-    display:block;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
 
-    margin:16px auto 0;
+    align-self:center;
 
-    line-height:0;
+    margin:18px auto 0;
+    padding:10px 19px;
+
+    border:1px solid rgba(169,129,47,.92);
+    border-radius:999px;
+
+    color:var(--navy-dark);
+    background:linear-gradient(
+        180deg,
+        #f7df8e 0%,
+        #d4af37 100%
+    );
+
+    font-size:13px;
+    font-weight:800;
+    line-height:1;
+    letter-spacing:.04em;
+    text-transform:uppercase;
     text-decoration:none;
+
+    box-shadow:
+        0 3px 0 #9c741d,
+        0 8px 18px rgba(169,129,47,.20);
 
     transition:
         transform .2s ease,
-        filter .2s ease;
+        box-shadow .2s ease,
+        background .2s ease;
+}
+
+.partner-main-button span:last-child{
+    width:24px;
+    height:24px;
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    border:1px solid rgba(5,23,52,.30);
+    border-radius:50%;
+
+    font-size:18px;
+    line-height:1;
+
+    transition:transform .2s ease;
 }
 
 .partner-main-button:hover{
     transform:translateY(-2px);
+
+    background:linear-gradient(
+        180deg,
+        #fbe7a3 0%,
+        #ddb944 100%
+    );
+
+    box-shadow:
+        0 4px 0 #9c741d,
+        0 11px 22px rgba(169,129,47,.28);
+}
+
+.partner-main-button:hover span:last-child{
+    transform:translateX(2px);
+}
+
+/* ==================================================
+   TEMPORARY SUPPORT FOR OLD IMAGE BUTTONS
+================================================== */
+
+.partner-main-button:has(img){
+    width:142px;
+    min-width:0;
+    min-height:0;
+
+    display:block;
+
+    padding:0;
+
+    border:0;
+
+    background:none;
+    box-shadow:none;
+
+    line-height:0;
+}
+
+.partner-main-button:has(img):hover{
+    background:none;
+
+    box-shadow:none;
 
     filter:drop-shadow(
         0 6px 9px rgba(183,125,18,.25)
@@ -765,6 +840,7 @@ img{
 
     display:block;
 }
+
 /* ==================================================
    10 WHY VESTRODIRECT
 ================================================== */
@@ -1186,7 +1262,6 @@ img{
     /* ==================================================
        PARTNER OFFERS
     ================================================== */
-
     .partner-offers-section{
         padding-top:6px;
         padding-bottom:44px;
@@ -1222,6 +1297,23 @@ img{
 
     .partner-logo-header{
         min-height:78px;
+        padding:14px 20px;
+    }
+
+    .mystim-logo{
+        width:220px;
+    }
+
+    .orion-logo{
+        width:150px;
+    }
+
+    .orion-claim{
+        width:118px;
+    }
+
+    .tenga-logo{
+        width:180px;
     }
 
     .partner-card-body{
@@ -1232,20 +1324,73 @@ img{
         min-height:auto;
 
         font-size:13px;
+        line-height:1.5;
+    }
+
+    .partner-divider{
+        margin:7px 0 10px;
     }
 
     .partner-benefits{
-        grid-template-columns:repeat(2, minmax(0, 1fr));
+        grid-template-columns:repeat(2,minmax(0,1fr));
         gap:16px 10px;
     }
 
     .partner-benefits li{
+        padding-top:35px;
+
         font-size:10px;
+        line-height:1.35;
+    }
+
+    .partner-trust-line{
+        gap:7px 16px;
+
+        margin:15px 0 11px;
+    }
+
+    .partner-trust-line span{
+        font-size:12px;
+    }
+
+    .partner-links-title{
+        font-size:16px;
     }
 
     .partner-category-links{
         min-height:auto;
+        gap:7px;
     }
+
+    .partner-category-links a{
+        min-height:30px;
+        padding:6px 11px;
+
+        font-size:11px;
+    }
+
+    .partner-main-button{
+        min-width:164px;
+        min-height:40px;
+
+        padding:9px 17px;
+
+        font-size:12px;
+    }
+
+    .partner-main-button span:last-child{
+        width:22px;
+        height:22px;
+
+        font-size:16px;
+    }
+
+    .partner-main-button:has(img){
+        min-width:0;
+        min-height:0;
+        padding:0;
+    }
+  
 
 
     /* ==================================================
