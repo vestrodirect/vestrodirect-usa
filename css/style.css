@@ -491,9 +491,8 @@ img{
     display:flex;
     flex-direction:column;
 
-    padding:22px 30px 24px;
+    padding:22px 30px 30px;
 }
-
 .partner-card-text{
     min-height:72px;
 
@@ -658,8 +657,7 @@ img{
 ================================================== */
 
 .partner-links-title{
-
-    margin-bottom:18px;
+    margin:0 0 16px;
 
     color:#ad770f;
 
@@ -673,32 +671,26 @@ img{
     line-height:1.3;
 
     text-align:center;
-
 }
-
 /* ==================================================
    PARTNER CATEGORY LINKS
 ================================================== */
 
 .partner-category-links{
-
     display:flex;
     justify-content:center;
     align-items:center;
-
     flex-wrap:wrap;
-    gap:8px;
 
-    margin-bottom:22px;
-
+    gap:9px;
 }
 .partner-category-links a{
     display:inline-flex;
     align-items:center;
     justify-content:center;
 
-    min-height:31px;
-    padding:6px 13px;
+    min-height:34px;
+    padding:7px 14px;
 
     border:1.5px solid rgba(212,175,55,.78);
     border-radius:999px;
@@ -718,7 +710,6 @@ img{
         border-color .2s ease,
         transform .2s ease;
 }
-
 .partner-category-links a:hover{
     color:#ffffff;
     background:var(--navy-text);
@@ -743,7 +734,7 @@ img{
 
     align-self:center;
 
-    margin:18px auto 0;
+    margin:24px auto 0;
     padding:10px 19px;
 
     border:1px solid rgba(169,129,47,.92);
