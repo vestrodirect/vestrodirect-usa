@@ -485,7 +485,18 @@ img{
     background:#f3f9fc;
     border-bottom:2px solid #e70046;
 }
+.partner-offer-card[data-partner="Loren Wellness"]{
+    background:linear-gradient(
+        180deg,
+        #fbf8ff 0%,
+        #f3eaff 100%
+    );
+}
 
+.partner-offer-card[data-partner="Loren Wellness"] .partner-logo-header{
+    background:#d9c2f2;
+    border-bottom:2px solid #efff00;
+}
 
 /* ==================================================
    PARTNER CARD BODY
