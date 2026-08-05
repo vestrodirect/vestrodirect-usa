@@ -413,13 +413,6 @@ img{
     );
 }
 
-.partner-offer-card-tenga{
-    grid-column:1 / -1;
-
-    width:calc(50% - 15px);
-    justify-self:center;
-}
-
 
 /* ==================================================
    PARTNER LOGO HEADERS
@@ -432,10 +425,47 @@ img{
     align-items:center;
     justify-content:center;
 
+    gap:18px;
     padding:18px 30px;
 }
 
-.mystim-logo-header{
+.partner-logo{
+    width:auto;
+    max-width:260px;
+    max-height:72px;
+    height:auto;
+
+    display:block;
+
+    object-fit:contain;
+}
+
+.partner-logo-secondary{
+    width:auto;
+    max-width:135px;
+    max-height:58px;
+    height:auto;
+
+    display:block;
+
+    object-fit:contain;
+}
+
+
+/* ==================================================
+   OFFER-SPECIFIC STYLES
+   TEMPORARY: MYSTIM & ORION
+================================================== */
+
+.partner-offer-card[data-partner="Mystim"]{
+    background:linear-gradient(
+        180deg,
+        #fffaf4 0%,
+        #fff5e9 100%
+    );
+}
+
+.partner-offer-card[data-partner="Mystim"] .partner-logo-header{
     background:linear-gradient(
         135deg,
         #120e10 0%,
@@ -443,41 +473,17 @@ img{
     );
 }
 
-.orion-logo-header{
-    gap:18px;
+.partner-offer-card[data-partner="Orion"]{
+    background:linear-gradient(
+        180deg,
+        #f5fbfe 0%,
+        #eaf5fa 100%
+    );
+}
 
+.partner-offer-card[data-partner="Orion"] .partner-logo-header{
     background:#f3f9fc;
     border-bottom:2px solid #e70046;
-}
-
-.tenga-logo-header{
-    background:#fff8f5;
-    border-bottom:2px solid #ef1b2d;
-}
-
-.partner-logo{
-    display:block;
-
-    object-fit:contain;
-}
-
-.mystim-logo{
-    width:250px;
-}
-
-.orion-logo{
-    width:170px;
-}
-
-.orion-claim{
-    width:134px;
-    height:auto;
-
-    display:block;
-}
-
-.tenga-logo{
-    width:200px;
 }
 
 
@@ -493,6 +499,7 @@ img{
 
     padding:22px 30px 30px;
 }
+
 .partner-card-text{
     min-height:72px;
 
@@ -672,6 +679,8 @@ img{
 
     text-align:center;
 }
+
+
 /* ==================================================
    PARTNER CATEGORY LINKS
 ================================================== */
@@ -684,12 +693,14 @@ img{
 
     gap:9px;
 }
+
 .partner-category-links a{
+    min-height:34px;
+
     display:inline-flex;
     align-items:center;
     justify-content:center;
 
-    min-height:34px;
     padding:7px 14px;
 
     border:1.5px solid rgba(212,175,55,.78);
@@ -710,6 +721,7 @@ img{
         border-color .2s ease,
         transform .2s ease;
 }
+
 .partner-category-links a:hover{
     color:#ffffff;
     background:var(--navy-text);
@@ -724,104 +736,41 @@ img{
 ================================================== */
 
 .partner-main-button{
-    min-width:176px;
-    min-height:42px;
+    width:158px;
 
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    gap:12px;
-
+    display:block;
     align-self:center;
 
     margin:24px auto 0;
-    padding:10px 19px;
 
-    border:1px solid rgba(169,129,47,.92);
     border-radius:999px;
 
-    color:var(--navy-dark);
     background:#ffffff;
 
-    font-size:13px;
-    font-weight:800;
-    line-height:1;
-    letter-spacing:.04em;
-    text-transform:uppercase;
+    line-height:0;
     text-decoration:none;
 
-    box-shadow:
-        0 3px 0 #9c741d,
-        0 8px 18px rgba(169,129,47,.20);
+    overflow:hidden;
 
     transition:
         transform .2s ease,
-        box-shadow .2s ease,
-        background .2s ease;
-}
-
-.partner-main-button span:last-child{
-    width:24px;
-    height:24px;
-
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-
-    border:1.5px solid rgba(5,23,52,.30);
-    border-radius:50%;
-
-    font-size:18px;
-    line-height:1;
-
-    transition:transform .2s ease;
+        filter .2s ease;
 }
 
 .partner-main-button:hover{
     transform:translateY(-2px);
 
-  background:#ffffff;
-}
-   
-/* ==================================================
-   TEMPORARY SUPPORT FOR OLD IMAGE BUTTONS
-================================================== */
-
-.partner-main-button:has(img){
-    width:158px;
-    min-width:0;
-    min-height:0;
-
-    display:block;
-
-    padding:0;
-
-    border:0;
-    border-radius:999px;
-
-    background:#ffffff;
-    box-shadow:none;
-
-    line-height:0;
-    overflow:hidden;
-}
-
-.partner-main-button:has(img):hover{
-    background:#ffffff;
-
-    box-shadow:none;
-
     filter:drop-shadow(
         0 6px 9px rgba(183,125,18,.25)
     );
 }
+
 .partner-main-button img{
     width:100%;
     height:auto;
 
     display:block;
 }
-
 /* ==================================================
    10 WHY VESTRODIRECT
 ================================================== */
@@ -1271,31 +1220,22 @@ img{
         gap:20px;
     }
 
-    .partner-offer-card-tenga{
-        grid-column:auto;
-        width:100%;
-    }
+ 
 
     .partner-logo-header{
         min-height:78px;
         padding:14px 20px;
     }
 
-    .mystim-logo{
-        width:220px;
-    }
+   .partner-logo{
+    max-width:220px;
+    max-height:58px;
+}
 
-    .orion-logo{
-        width:150px;
-    }
-
-    .orion-claim{
-        width:118px;
-    }
-
-    .tenga-logo{
-        width:180px;
-    }
+.partner-logo-secondary{
+    max-width:118px;
+    max-height:48px;
+}
 
     .partner-card-body{
         padding:18px 18px 20px;
