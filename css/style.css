@@ -801,15 +801,17 @@ img{
     padding:0;
 
     border:0;
+    border-radius:999px;
 
-    background:none;
+    background:#ffffff;
     box-shadow:none;
 
     line-height:0;
+    overflow:hidden;
 }
 
 .partner-main-button:has(img):hover{
-    background:none;
+    background:#ffffff;
 
     box-shadow:none;
 
@@ -817,7 +819,6 @@ img{
         0 6px 9px rgba(183,125,18,.25)
     );
 }
-
 .partner-main-button img{
     width:100%;
     height:auto;
