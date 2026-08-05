@@ -784,17 +784,9 @@ img{
 .partner-main-button:hover{
     transform:translateY(-2px);
 
-    background:linear-gradient(
-        180deg,
-        #fbe7a3 0%,
-        #ddb944 100%
-    );
-
-   
-.partner-main-button:hover span:last-child{
-    transform:translateX(2px);
+  background:#ffffff;
 }
-
+   
 /* ==================================================
    TEMPORARY SUPPORT FOR OLD IMAGE BUTTONS
 ================================================== */
