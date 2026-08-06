@@ -630,6 +630,7 @@ img{
 .partner-benefits li{
     position:relative;
 
+    min-height:85px;
     padding-top:37px;
 
     color:var(--navy-text);
