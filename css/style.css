@@ -485,6 +485,9 @@ img{
     background:#f3f9fc;
     border-bottom:2px solid #e70046;
 }
+/* ==================================================
+  LOREN
+================================================== */
 .partner-offer-card[data-partner="Loren Wellness"]{
     background:linear-gradient(
         180deg,
@@ -502,6 +505,35 @@ img{
     width:205px;
     max-width:205px;
     max-height:none;
+}
+/* ==================================================
+   JE JOUE
+================================================== */
+
+.partner-offer-card[data-partner="Je Joue"]{
+
+    background:linear-gradient(
+        180deg,
+        #fffcff 0%,
+        #faf7ff 100%
+    );
+
+}
+
+.partner-offer-card[data-partner="Je Joue"] .partner-logo-header{
+
+    background:#362245;
+
+    border-bottom:2px solid #d6c2ff;
+
+}
+
+.partner-offer-card[data-partner="Je Joue"] .partner-logo{
+
+    max-width:210px;
+
+    max-height:64px;
+
 }
 /* ==================================================
    PARTNER CARD BODY
